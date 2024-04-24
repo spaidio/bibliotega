@@ -3,7 +3,7 @@ package Model;
 import java.util.UUID;
 
 public class Livro {
-	private String id;
+	private UUID id;
     private String titulo;
     private String autor;
     private String genero;
@@ -11,15 +11,9 @@ public class Livro {
     private String dataLancamento;
     private String disponibilidade;
 
-    public static void main(String[]args) {
-    
-    	UUID id = UUID.randomUUID();
-    	System.out.println("Id: " + id);
-    	
-    }
     public Livro(String titulo, String autor, String genero,String sinopse, String dataLancamento, String disponibilidade) 
     {
-
+    	this.id = UUID.randomUUID();
     	this.titulo = titulo;
     	this.autor = autor;
         this.genero = genero;
@@ -30,11 +24,11 @@ public class Livro {
 
     // Getters e Setters
 
-    public void setId(String id) {
+    public void setId(UUID id) {
         this.id = id;
     }
-    public String getTitulo() {
-        return titulo;
+    public UUID getId() {
+        return id;
     }
     public String getAutor() {
         return autor;
@@ -46,6 +40,9 @@ public class Livro {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+    public String getTitulo() {
+        return titulo;
     }
     
     public String getGenero() {
