@@ -3,21 +3,27 @@ package Model;
 import java.util.UUID;
 
 public class Livro {
+	
+	
 	private UUID id;
     private String titulo;
     private String autor;
     private String genero;
     private String sinopse;
+    private String preco;
+    private int paginas;
     private String dataLancamento;
     private String disponibilidade;
 
-    public Livro(String titulo, String autor, String genero,String sinopse, String dataLancamento, String disponibilidade) 
+    public Livro(String titulo, String autor, String genero,String sinopse, String preco, int paginas, String dataLancamento, String disponibilidade) 
     {
     	this.id = UUID.randomUUID();
     	this.titulo = titulo;
     	this.autor = autor;
         this.genero = genero;
         this.sinopse = sinopse;
+        this.preco = preco;
+        this.paginas = paginas;
         this.dataLancamento = dataLancamento;
         this.disponibilidade = disponibilidade;
     }
@@ -52,7 +58,18 @@ public class Livro {
     public void setGenero(String genero) {
         this.genero = genero;
     }
-
+    public void setPreco(String preco) {
+        this.preco = preco;
+        }
+    public void setPaginas(String paginas) {
+        this.paginas = paginas;
+    }
+    public void setPaginas(String paginas) {
+        this.paginas = paginas;
+        }
+    public String getPreco() {
+        return preco;
+    }
     public String getDisponibilidade() {
         return disponibilidade;
     }
